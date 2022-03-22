@@ -1,0 +1,33 @@
+C Results:
+
+Size of char : 1 byte
+Size of wide char : 4 bytes
+Size of void : 1 byte
+Size of short : 2 bytes
+Size of short int : 2 bytes
+Size of int : 4 bytes
+Size of long : 8 bytes
+Size of long int : 8 bytes
+Size of long long : 8 bytes
+Size of long long int : 8 bytes
+Size of float : 4 bytes
+Size of double : 8 bytes
+Size of long double : 16 bytes
+
+
+C++ Results:
+
+Sizeof char : 1 byte
+Sizeof wide char : 4 bytes
+Sizeof boolean : 1 byte
+Sizeof void : 1 byte
+Sizeof short : 2 bytes
+Sizeof short int : 2 bytes
+Sizeof int : 4 bytes
+Sizeof long : 8 bytes
+Sizeof long int : 8 bytes
+Sizeof long long : 8 bytes
+Sizeof long long int : 8 bytes
+Sizeof float : 4 bytes
+Sizeof double : 8 bytes
+Sizeof long double : 16 bytes

@@ -1,0 +1,11 @@
+#include <iostream>
+
+
+int main()
+{
+	int userInput;
+	std::cout << "Enter a number to double : ";
+	std::cin << userInput;
+	std::cout <<  "
+"
+}
