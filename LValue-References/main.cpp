@@ -34,6 +34,22 @@ void printByAddress(const std::string* ptr) // The function parameter is a point
 	std::cout << *ptr << '\n'; // print the value via the dereferenced pointer
 }
 
+void nullify(int*& refptr)		//lvalue reference to a void pointer (vice versa isn't possible since references aren't actual objects)
+{
+	refptr = nullptr;
+}
+
+void nullify(int** dblptr)		//I guess I should leave this with C and move on
+{
+	*dblptr = nullptr;
+}
+
+void isNull(void* ptr)
+{
+	//std::cout << ptr ? "Non-null\n" : "Null\n"; => don't forget operator precedence
+	std::cout << (ptr ? "Non-null\n" : "Null\n");
+}
+
 
 int main(int argc, char** argv)
 {
@@ -58,6 +74,19 @@ int main(int argc, char** argv)
 	const bool& constRef1 = isGrounded;		//const lvalue references can also reference modifiable (non-const)objects 
 	
 	const float& constRef2 = 6;		//const lvalue references can also be given an rvalue and it will create a temporary object
+	
+	int test1 = 72;
+	int* test1ptr = &test1;
+	int test2 = 27;
+	int* test2ptr = &test2;
+	
+	isNull(test1ptr);
+	nullify(test1ptr);
+	isNull(test1ptr);
+	
+	isNull(test2ptr);
+	nullify(&test2ptr);
+	isNull(test2ptr);
 	
 	return 0;
 }
