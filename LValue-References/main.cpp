@@ -22,17 +22,17 @@
 
 void printByValue(std::string val) // The function parameter is a copy of str
 {
-	std::cout << val << '\n'; // print the value via the copy
+	std::cout << val << std::endl; // print the value via the copy
 }
 
 void printByReference(const std::string& ref) // The function parameter is a reference that binds to str
 {
-	std::cout << ref << '\n'; // print the value via the reference
+	std::cout << ref << std::endl; // print the value via the reference
 }
 
 void printByAddress(const std::string* ptr) // The function parameter is a pointer that holds the address of str
 {
-	std::cout << *ptr << '\n'; // print the value via the dereferenced pointer
+	std::cout << *ptr << std::endl; // print the value via the dereferenced pointer
 }
 
 void nullify(int*& refptr)		//lvalue reference to a void pointer (vice versa isn't possible since references aren't actual objects)
@@ -65,9 +65,10 @@ void onlyNullptr(std::nullptr_t null)	//nullptr is of type nullptr_t which is de
 
  And pass by address just copies an address from the caller to the called function which is just passing an address by value.
   
- Therefore, we can conclude that C++ really passes everything by value! The properties of pass by address (and reference) come 
+ Therefore, we can conclude that C++ really actually passes everything by value! The properties of pass by address (and reference) come 
  solely from the fact that we can dereference the passed address to change the argument, which we can not do with a normal value parameter!
  
+ https://www.learncpp.com/cpp-tutorial/pass-by-address-part-2/
  */
 
 
