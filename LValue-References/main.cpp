@@ -18,6 +18,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstddef>
 
 void printByValue(std::string val) // The function parameter is a copy of str
 {
@@ -49,6 +50,25 @@ void isNull(void* ptr)
 	//std::cout << ptr ? "Non-null\n" : "Null\n"; => don't forget operator precedence
 	std::cout << (ptr ? "Non-null\n" : "Null\n");
 }
+
+
+void onlyNullptr(std::nullptr_t null)	//nullptr is of type nullptr_t which is defined in the cstddef header file and nullptr_t can only have value nullptr!!
+{
+	
+}
+
+/*
+											SOME REALIZATION
+ If they can’t be optimized away entirely, references are normally implemented by the compiler using pointers. 
+ This means that behind the scenes, pass by reference is essentially just a pass by address 
+ (with access to the reference doing an implicit dereference).
+
+ And pass by address just copies an address from the caller to the called function which is just passing an address by value.
+  
+ Therefore, we can conclude that C++ really passes everything by value! The properties of pass by address (and reference) come 
+ solely from the fact that we can dereference the passed address to change the argument, which we can not do with a normal value parameter!
+ 
+ */
 
 
 int main(int argc, char** argv)
