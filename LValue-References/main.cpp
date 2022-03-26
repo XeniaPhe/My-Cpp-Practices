@@ -5,6 +5,17 @@
  * Created on March 26, 2022, 4:05 PM
  */
 
+/*
+ Important notes to remember :
+ 
+	1 => References must be initialized, pointers are not required to be initialized (but should be).
+	2 => References are not objects, pointers are.
+	3 => References can not be reseated (changed to reference something else), pointers can change what they are pointing at.
+	4 => References must always point at an object, pointers can point to nothing (we’ll see an example of this in the next lesson).
+ 
+ */
+
+
 #include <iostream>
 #include <string>
 
