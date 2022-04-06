@@ -32,9 +32,6 @@ int main(int argc, char** argv)
 	auto& m = j;
 	const auto& n =j;
 	
-	
-	
-	
 	return 0;
 }
 
